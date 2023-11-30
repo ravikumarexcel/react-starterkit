@@ -7,9 +7,7 @@ function App() {
   const routing = useRoutes(Routes);
   return (
     <div className="App">
-      <header className="App-header">
-        header
-      </header>
+      
       <div>
         {routing}
       </div>
