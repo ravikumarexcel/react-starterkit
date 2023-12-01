@@ -1,22 +1,23 @@
-import { lazy } from "react";
-import { Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Home from "../views/Home/Home.js";
+import Start from "../views/Start/Start.js";
+import Tests from "../views/Tests.js";
+import Questions from "../views/Questions.js";
+import NoPage from "../views/NoPage.js";
+import FullLayout from "../layouts/FullLayout.js";
 
-const FullLayout = lazy(() => import("../layouts/FullLayout.js"));
-// Pages
-const Home = lazy(() => import("../views/Home/Home.js"));
-const Start = lazy(() => import("../views/Start/Start.js"));
-const NoPage = lazy(() => import("../views/NoPage.js"));
+const AppRoutes = (
+    <Routes>
+        <Route path="/" element={<FullLayout />} >
+            <Route path="/home" element={<Home />} >
+                <Route path="/home/tests" element={<Tests />} />
+                <Route path="/home/questions" element={<Questions />} />
+            </Route>
+            <Route path="/" element={<Navigate to="/home" />} />
+            <Route path="/start" element={<Start />} />
+            <Route path="*" element={<NoPage />} />
+        </Route>
+    </Routes>
+);
 
-const Routes = [
-    {
-        path: "/",
-        element: <FullLayout />,
-        children: [
-            { path: "/", element: <Navigate to="/home" /> },
-            { path: "/home", exact: true, element: <Home /> },
-            { path: "/start", exact: true, element: <Start /> },
-            { path: "*", exact: true, element: <NoPage /> }
-        ]
-    }
-];
-export default Routes;
+export default AppRoutes;

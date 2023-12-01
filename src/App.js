@@ -1,18 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import { useRoutes } from 'react-router-dom';
-import Routes from './routes/Router';
+import AppRoutes from './routes/Router';
 
 function App() {
-  const routing = useRoutes(Routes);
   return (
     <div className="App">
-      
       <div>
-        {routing}
+        {AppRoutes}
       </div>
-      <button className='btn btn-primary'>Button <i class="bi bi-apple"></i></button>
-
     </div>
   );
 }
