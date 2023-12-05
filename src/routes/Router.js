@@ -1,10 +1,10 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Home from "../views/Home/Home.js";
-import Start from "../views/Start/Start.js";
-import Tests from "../views/Tests.js";
-import Questions from "../views/Questions.js";
-import NoPage from "../views/NoPage.js";
-import FullLayout from "../layouts/FullLayout.js";
+import Home from "../components/containers/Home/Home.js";
+import Start from "../components/containers/Start/Start.js";
+import Tests from "../components/containers/Tests.js";
+import Questions from "../components/containers/Questions.js";
+import NoPage from "../components/containers/NoPage.js";
+import FullLayout from '../components/layouts/FullLayout.js';
 
 const AppRoutes = (
     <Routes>

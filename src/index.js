@@ -4,7 +4,7 @@ import { HashRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Loader from './layouts/components/loader/Loader';
+import Loader from './components/common/loader/Loader';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
