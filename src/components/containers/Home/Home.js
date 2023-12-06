@@ -1,12 +1,15 @@
 import { Outlet } from "react-router-dom";
 import "./Home.css";
+import { FormattedMessage } from "react-intl";
 
 const Home = () => {
     return (
         <>
             <div class="row scree-height">
                 <div class="col border-right">
-                    <h4>Resources</h4>
+                    <h4>
+                        <FormattedMessage id="home.title" />
+                    </h4>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#/home/tests">Your Tests</a>
