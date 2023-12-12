@@ -12,8 +12,3 @@ const TestTabs = () => {
                             <a class="nav-link active" aria-current="page" href="#/home/tests">Untitled</a>
                         </li>
 
-                    </ul>
-        </>
-    );
-}
-export default TestTabs;
